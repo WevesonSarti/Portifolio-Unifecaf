@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Consultas</title>
+</head>
+<body>
+    <h1>Histórico de Consultas</h1>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Cidade</th>
+            <th>Temperatura (°C)</th>
+            <th>Umidade (%)</th>
+        </tr>
+        {% for linha in dados %}
+        <tr>
+            <td>{{ linha["cidade"] }}</td>
+            <td>{{ linha["temp"] }}</td>
+            <td>{{ linha["umidade"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
